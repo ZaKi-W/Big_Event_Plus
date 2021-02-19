@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入layui-css样式 -->
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <span>评论管理</span>
+        </div>
+        <div class="layui-card-body">
+            <!-- 文章列表的表格 -->
+            <table class="layui-table">
+                <colgroup>
+                    <col width="5%">
+                    <col width="15%">
+                    <col width="30%">
+                    <col width="20%">
+                    <col width="20%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>评论人</th>
+                        <th>评论内容</th>
+                        <th>评论时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 渲染 -->
+                </tbody>
+            </table>
+            <!-- 分页区域 -->
+            <!-- <div id="pageBox"></div> -->
+        </div>
+    </div>
+    <!-- 定义模板 -->
+    <script type="text/html" id="tpl-table">
+        {{each data}}
+        <tr>
+            <td>{{$value.id}}</td>
+            <td>{{$value.uname}}</td>
+            <td>{{$value.content}}</td>
+            <td>{{$value.cdate|formatDate}}</td>
+            <td>
+                <button data-id="{{$value.id}}" type="button"
+                    class="layui-btn layui-btn-sm layui-btn-danger layui-btn-xs delete">删除</button>
+            </td>
+        </tr>
+        {{/each}}
+    </script>
+
+    <!-- layui.all.js -->
+    <script src="../assets/lib/layui/layui.all.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="../assets/lib/template-web.js"></script>
+    <!-- 引入jquery.js -->
+    <script src="../assets/lib/jquery.js"></script>
+    <!-- 引入baseAPI.js -->
+    <script src="../assets/js/baseApi.js"></script>
+    <!-- 引入自己的js -->
+    <script src="../assets/js/comment/comment.js"></script>
+</body>
+
+</html>

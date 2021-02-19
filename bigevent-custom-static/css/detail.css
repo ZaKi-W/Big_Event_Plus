@@ -1037,11 +1037,22 @@ ul {
   color: #262626;
 }
 
-.kr_body > .like:before {
-  content: attr(data-count);
+.kr_body > .like {
+  /* content: attr(data-count);
   display: block;
   width: 70px;
   height: 28px;
+  margin: 10px auto;
+  padding-top: 42px;
+  font-size: 12px;
+  cursor: pointer;
+  background-image: url(../images/like.png);
+  background-size: 70px; */
+
+  content: attr(data-count);
+  display: block;
+  width: 70px;
+  height: 71px;
   margin: 10px auto;
   padding-top: 42px;
   font-size: 12px;
@@ -1051,14 +1062,23 @@ ul {
 }
 
 .kr_body .extra {
-  padding: 15px 0;
+  /* padding: 15px 0;
   margin-top: 30px;
   border-top: 4px solid #4285f4;
   background-color: rgba(245, 247, 249, 0.97);
   display: flex;
   justify-content: space-between;
   display: flex;
-  bottom: 0;
+  bottom: 0; */
+
+  padding: 15px 0;
+    margin-top: 67px;
+    border-top: 4px solid #4285f4;
+    background-color: rgba(245, 247, 249, 0.97);
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    bottom: 0;
 }
 
 .kr_body .extra .profile {
@@ -1329,6 +1349,8 @@ ul {
   background-image: url(../images/dislike.png);
   background-size: 24px;
   background-repeat: no-repeat;
+
+  
 }
 
 .kr_body .kr_panel .kr_comment_card:first-of-type {
@@ -1476,4 +1498,17 @@ ul {
   width: 24px;
   height: 24px;
   background-position: 0 -828px;
+}
+.like,#wert{
+  position: relative;
+}
+#list #iniu{
+  position: absolute;
+  top: 45px;
+  left: 33px;
+}
+#wert #initui{
+  position: absolute;
+  top: 0px;
+  left: 283px;
 }
