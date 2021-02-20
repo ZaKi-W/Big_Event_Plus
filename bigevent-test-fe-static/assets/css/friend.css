@@ -1,0 +1,22 @@
+html,body {
+    padding: 0;
+    margin: 0;
+}
+.layui-card-header{
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.bg {
+    background: #2d3237;
+    text-align: center;
+}
+#add_form{
+    margin: 15px 30px 0 0;
+}
+#preIcon{
+    height: 30px;
+}
+#addpreIcon {
+    height: 30px;
+}
