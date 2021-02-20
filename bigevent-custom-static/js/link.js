@@ -3,7 +3,7 @@ $(function () {
     function getLink() {
         $.ajax({
             method: 'GET',
-            url: '/admin/links',
+            url: 'http://localhost:8888/api/links',
             success: function (res) {
                 if (res.status === 0) {
                     console.log(res);
